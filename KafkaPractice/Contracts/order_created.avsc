@@ -1,0 +1,11 @@
+﻿{
+  "type": "record",
+  "name": "OrderCreatedEvent",
+  "namespace": "KafkaPractice.Contracts",
+  "fields": [
+    {"name": "orderId", "type": "string"},
+    {"name": "customerEmail", "type": "string"},
+    {"name": "total", "type": "double"},
+    {"name": "createdAt", "type": "string"}
+  ]
+}

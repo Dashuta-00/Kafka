@@ -1,0 +1,6 @@
+﻿---
+- name: Deploy Kafka Monitoring Stack
+  hosts: local
+  become: true
+  roles:
+    - docker_stack

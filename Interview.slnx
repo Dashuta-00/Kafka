@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/KafkaPractice/">
+    <Project Path="KafkaPractice/Consumer/Consumer.csproj" />
+    <Project Path="KafkaPractice/Contracts/Contracts.csproj" />
+    <Project Path="KafkaPractice/Producer/Producer.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="compose.yaml" />
+  </Folder>
+  <Project Path="AsyncClient/AsyncClient.csproj" />
+  <Project Path="AsyncQueueProj/AsyncQueueProj.csproj" />
+  <Project Path="AsyncServer/AsyncServer.csproj" />
+  <Project Path="ConcurrentCollections/ConcurrentCollections.csproj" />
+  <Project Path="Interview/Interview.csproj" />
+  <Project Path="KafkaProjMT/KafkaProjMT.csproj" />
+  <Project Path="SynchronizationContextProj/SynchronizationContextProj.csproj" />
+  <Project Path="Tasks/Tasks.csproj" />
+  <Project Path="Tests/Tests.csproj" />
+  <Project Path="Threads/Threads.csproj" />
+</Solution>

@@ -1,0 +1,34 @@
+﻿---
+- name: Ensure Docker and Docker Compose are installed
+  ansible.builtin.apt:
+    name:
+      - docker.io
+      - docker-compose
+      state: present
+      update_cache: true
+
+- name: Create project directory on target
+  ansible.builtin.file:
+    path: /opt/kafka-stack
+    state: directory
+    mode: '0755'
+
+- name: Copy compose.yaml
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/../../compose.yaml"
+    dest: /opt/kafka-stack/compose.yaml
+
+- name: Copy prometheus.yml
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/../../prometheus.yml"
+    dest: /opt/kafka-stack/prometheus.yml
+
+- name: Copy Terraform configuration
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/../../terraform/"
+    dest: /opt/kafka-stack/terraform/
+    
+- name: Start the stack with Docker Compose
+  community.docker.docker_compose_v2:
+    project_src: /opt/kafka-stack
+    state: present
